@@ -1,8 +1,406 @@
-<html>
-  <head>
-    <title>ยอนดีต้อนรับ</title>
-  </head>
-  <body>
-    <h1>ยินดีต้อนรับเข้าสู่เว็บไซล์วริศ</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>จังหวัดน่าน</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial,"Tahoma",sans-serif;
+    background:#f7f2fa;
+    color:#333;
+}
+
+/* ส่วนหัว */
+.header{
+    background:linear-gradient(135deg,#4a148c,#8e24aa);
+    color:white;
+    padding:25px 8%;
+    display:flex;
+    align-items:center;
+}
+
+.logo{
+    width:80px;
+    height:80px;
+    background:white;
+    border-radius:50%;
+    margin-right:20px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:38px;
+}
+
+.header h1{
+    margin:0;
+    font-size:34px;
+}
+
+.header p{
+    margin:5px 0 0;
+}
+
+/* เมนู */
+.navbar{
+    background:#311b5e;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    padding:15px 25px;
+}
+
+.navbar a:hover{
+    background:#6a1b9a;
+}
+
+/* ภาพหลัก */
+.banner{
+    width:100%;
+    height:400px;
+
+    background-image:
+    linear-gradient(
+        rgba(49,27,94,.4),
+        rgba(49,27,94,.6)
+    ),
+    url("nan.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.banner-text{
+    background:rgba(49,27,94,.85);
+    color:white;
+    padding:35px 60px;
+    text-align:center;
+    border-radius:15px;
+}
+
+.banner-text h2{
+    font-size:40px;
+    margin:0;
+}
+
+/* เนื้อหา */
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+.title{
+    color:#6a1b9a;
+    border-left:7px solid #9c27b0;
+    padding-left:15px;
+}
+
+/* กล่อง */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 4px 15px rgba(74,20,140,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 8px 20px rgba(74,20,140,.25);
+}
+
+.card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    color:#6a1b9a;
+}
+
+.card-content a{
+    display:inline-block;
+    background:#8e24aa;
+    color:white;
+    padding:10px 18px;
+    border-radius:6px;
+    text-decoration:none;
+}
+
+.card-content a:hover{
+    background:#4a148c;
+}
+
+/* ส่วนท้าย */
+footer{
+    margin-top:60px;
+    background:#311b5e;
+    color:white;
+    text-align:center;
+    padding:35px;
+}
+
+/* มือถือ */
+@media(max-width:800px){
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .header{
+        text-align:center;
+        flex-direction:column;
+    }
+
+    .logo{
+        margin-right:0;
+        margin-bottom:15px;
+    }
+
+    .banner{
+        height:300px;
+    }
+
+    .banner-text{
+        width:90%;
+        padding:25px;
+    }
+
+    .banner-text h2{
+        font-size:28px;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ส่วนหัว -->
+
+<div class="header">
+
+    <div class="logo">
+         <img src="D:\วริศ 14\ตาน่าน"
+    </div>
+
+    <div>
+        <h1>จังหวัดน่าน</h1>
+
+        <p>
+            เมืองแห่งความสงบ ธรรมชาติ และวัฒนธรรมล้านนา
+        </p>
+    </div>
+
+</div>
+
+
+<!-- เมนู -->
+
+<div class="navbar">
+
+    <a href="index.html">
+        หน้าแรก
+    </a>
+
+    <a href="history.html">
+        ประวัติเมืองน่าน
+    </a>
+
+    <a href="travel.html">
+        สถานที่ท่องเที่ยว
+    </a>
+
+    <a href="culture.html">
+        วัฒนธรรมและประเพณี
+    </a>
+
+    <a href="news.html">
+        ข่าวสาร
+    </a>
+
+    <a href="contact.html">
+        ติดต่อเรา
+    </a>
+
+</div>
+
+
+<!-- ภาพหลัก -->
+
+<div class="banner">
+
+    <div class="banner-text">
+
+        <h2>
+            ยินดีต้อนรับสู่จังหวัดน่าน
+        </h2>
+
+        <p>
+            สัมผัสเสน่ห์เมืองเก่า ธรรมชาติ
+            และวิถีชีวิตของชาวน่าน
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- เนื้อหา -->
+
+<div class="container">
+
+    <h2 class="title">
+        ข้อมูลเกี่ยวกับจังหวัดน่าน
+    </h2>
+
+
+    <div class="cards">
+
+
+        <!-- ประวัติ -->
+
+        <div class="card">
+
+            <img
+                src="nan-city.jpg"
+                alt="เมืองน่าน"
+            >
+
+            <div class="card-content">
+
+                <h3>
+                    ประวัติเมืองน่าน
+                </h3>
+
+                <p>
+                    จังหวัดน่านเป็นจังหวัดเล็ก ๆ
+                    ทางภาคเหนือที่มีประวัติศาสตร์
+                    ยาวนานกว่า 700 ปี
+                </p>
+
+                <a href="file:///D:/%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B8%A8%2014/%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%990.012.html">
+                    อ่านประวัติ
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- ท่องเที่ยว -->
+
+        <div class="card">
+
+            <img
+                src="wat-phumin.jpg"
+                alt="วัดภูมินทร์"
+            >
+
+            <div class="card-content">
+
+                <h3>
+                    สถานที่ท่องเที่ยว
+                </h3>
+
+                <p>
+                    พบกับสถานที่ท่องเที่ยวที่สวยงาม
+                    ทั้งวัดเก่าแก่ ภูเขา
+                    และธรรมชาติ
+                </p>
+
+                <a href="travel.html">
+                    ดูสถานที่ท่องเที่ยว
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- วัฒนธรรม -->
+
+        <div class="card">
+
+            <img
+                src="culture.jpg"
+                alt="วัฒนธรรมจังหวัดน่าน"
+            >
+
+            <div class="card-content">
+
+                <h3>
+                    วัฒนธรรมและประเพณี
+                </h3>
+
+                <p>
+                    เรียนรู้วัฒนธรรม ประเพณี
+                    และวิถีชีวิตที่เป็นเอกลักษณ์
+                    ของชาวจังหวัดน่าน
+                </p>
+
+                <!-- กดแล้วไปอีกหน้า -->
+
+                <a href="file:///D:/%E0%B8%A7%E0%B8%A3%E0%B8%B4%E0%B8%A8%2014/%E0%B8%99%E0%B9%88%E0%B8%B2%E0%B8%990.13.html">
+                    ดูข้อมูล
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ส่วนท้าย -->
+
+<footer>
+
+    <h2>
+        จังหวัดน่าน
+    </h2>
+
+    <p>
+        เมืองแห่งความสงบ ธรรมชาติ และวัฒนธรรมล้านนา
+    </p>
+
+    <p>
+        เว็บไซต์จัดทำเพื่อการศึกษา
+    </p>
+
+</footer>
+
+</body>
 </html>
