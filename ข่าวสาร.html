@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>ผู้จัดทำ</title>
+
+
+    <style>
+
+
+        /* ================= ตั้งค่าพื้นฐาน ================= */
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+        body {
+
+            margin: 0;
+
+            font-family:
+                Arial,
+                "Tahoma",
+                sans-serif;
+
+            background: #f7f2fa;
+
+            color: #333;
+
+            line-height: 1.9;
+
+        }
+
+
+
+        /* ================= ส่วนหัว ================= */
+
+        .header {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #4a148c,
+                    #8e24aa
+                );
+
+            color: white;
+
+            padding: 25px 8%;
+
+            display: flex;
+
+            align-items: center;
+
+        }
+
+
+        .logo {
+
+            width: 80px;
+
+            height: 80px;
+
+            background: white;
+
+            border-radius: 50%;
+
+            margin-right: 20px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+        }
+
+
+        .logo img {
+
+            width: 100%;
+
+            height: 100%;
+
+            object-fit: cover;
+
+        }
+
+
+        .header h1 {
+
+            margin: 0;
+
+            font-size: 34px;
+
+        }
+
+
+        .header p {
+
+            margin: 5px 0 0;
+
+            font-size: 16px;
+
+        }
+
+
+
+        /* ================= เมนู ================= */
+
+        .navbar {
+
+            background: #311b5e;
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+        }
+
+
+        .navbar a {
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 15px 22px;
+
+            display: block;
+
+            transition: 0.3s;
+
+        }
+
+
+        .navbar a:hover {
+
+            background: #6a1b9a;
+
+        }
+
+
+        .navbar a.active {
+
+            background: #6a1b9a;
+
+            font-weight: bold;
+
+        }
+
+
+
+        /* ================= ภาพด้านบน ================= */
+
+        .banner {
+
+            width: 100%;
+
+            height: 300px;
+
+            background-image:
+
+                linear-gradient(
+                    rgba(49, 27, 94, 0.45),
+                    rgba(49, 27, 94, 0.7)
+                ),
+
+                url("nan.jpg");
+
+            background-size: cover;
+
+            background-position: center;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+        }
+
+
+        .banner-text {
+
+            background:
+                rgba(49, 27, 94, 0.85);
+
+            color: white;
+
+            padding: 30px 60px;
+
+            text-align: center;
+
+            border-radius: 15px;
+
+        }
+
+
+        .banner-text h2 {
+
+            font-size: 40px;
+
+            margin: 0;
+
+        }
+
+
+
+        /* ================= เนื้อหาหลัก ================= */
+
+        .container {
+
+            width: 90%;
+
+            max-width: 1100px;
+
+            margin: 50px auto;
+
+        }
+
+
+        .title {
+
+            color: #6a1b9a;
+
+            border-left:
+                7px solid #9c27b0;
+
+            padding-left: 15px;
+
+            margin-bottom: 35px;
+
+        }
+
+
+
+        /* ================= กล่องข้อมูลผู้จัดทำ ================= */
+
+        .creator-section {
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 4px 15px
+                rgba(74, 20, 140, 0.15);
+
+        }
+
+
+        .creator-section h2 {
+
+            color: #6a1b9a;
+
+            border-left:
+                7px solid #9c27b0;
+
+            padding-left: 15px;
+
+            margin-top: 0;
+
+            margin-bottom: 35px;
+
+        }
+
+
+
+        /* ================= การ์ดผู้จัดทำ ================= */
+
+        .creators {
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 30px;
+
+        }
+
+
+        .creator-card {
+
+            width: 50%;
+
+            background: #f3e5f5;
+
+            padding: 35px 25px;
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            border-bottom:
+                6px solid #9c27b0;
+
+            box-shadow:
+                0 4px 12px
+                rgba(74, 20, 140, 0.12);
+
+            transition: 0.3s;
+
+        }
+
+
+        .creator-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(74, 20, 140, 0.22);
+
+        }
+
+
+
+        /* ================= ช่องรูป ================= */
+
+        .creator-image {
+
+            width: 130px;
+
+            height: 130px;
+
+            margin: 0 auto 25px;
+
+            background: white;
+
+            border:
+                5px solid #9c27b0;
+
+            border-radius: 50%;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            overflow: hidden;
+
+        }
+
+
+        .creator-icon {
+
+            font-size: 55px;
+
+        }
+
+
+
+        /* ================= ข้อมูล ================= */
+
+        .creator-card h3 {
+
+            color: #6a1b9a;
+
+            font-size: 24px;
+
+            margin:
+                10px 0 15px;
+
+        }
+
+
+        .creator-card p {
+
+            margin: 5px 0;
+
+            font-size: 18px;
+
+        }
+
+
+        .position {
+
+            color: #8e24aa;
+
+            font-weight: bold;
+
+        }
+
+
+        .class-info {
+
+            color: #555;
+
+        }
+
+
+
+        /* ================= เส้นคั่น ================= */
+
+        .divider {
+
+            width: 80%;
+
+            height: 2px;
+
+            background: #ce93d8;
+
+            margin: 35px auto;
+
+        }
+
+
+
+        /* ================= ปุ่มกลับ ================= */
+
+        .back {
+
+            display: inline-block;
+
+            background: #8e24aa;
+
+            color: white;
+
+            text-decoration: none;
+
+            padding: 12px 25px;
+
+            border-radius: 7px;
+
+            margin-top: 35px;
+
+            transition: 0.3s;
+
+        }
+
+
+        .back:hover {
+
+            background: #4a148c;
+
+        }
+
+
+
+        /* ================= Footer ================= */
+
+        footer {
+
+            margin-top: 60px;
+
+            background: #311b5e;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 35px;
+
+        }
+
+
+        footer h2 {
+
+            margin-top: 0;
+
+        }
+
+
+        footer p {
+
+            margin: 5px 0;
+
+        }
+
+
+
+        /* ================= รองรับมือถือ ================= */
+
+        @media (max-width: 800px) {
+
+
+            .header {
+
+                flex-direction: column;
+
+                text-align: center;
+
+            }
+
+
+            .logo {
+
+                margin-right: 0;
+
+                margin-bottom: 15px;
+
+            }
+
+
+            .creators {
+
+                flex-direction: column;
+
+                align-items: center;
+
+            }
+
+
+            .creator-card {
+
+                width: 100%;
+
+            }
+
+
+            .banner {
+
+                height: 250px;
+
+            }
+
+
+            .banner-text {
+
+                width: 90%;
+
+                padding: 25px;
+
+            }
+
+
+            .banner-text h2 {
+
+                font-size: 30px;
+
+            }
+
+
+            .creator-section {
+
+                padding: 25px;
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+
+            .navbar a {
+
+                width: 50%;
+
+                text-align: center;
+
+            }
+
+
+            .creator-card h3 {
+
+                font-size: 21px;
+
+            }
+
+
+            .creator-image {
+
+                width: 110px;
+
+                height: 110px;
+
+            }
+
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==================================================
+         ส่วนหัว
+    ================================================== -->
+
+    <div class="header">
+
+
+        <div class="logo">
+
+            <img
+                src="logo.png"
+                alt="โลโก้จังหวัดน่าน"
+            >
+
+        </div>
+
+
+        <div>
+
+            <h1>
+                ผู้จัดทำ
+            </h1>
+
+
+            <p>
+                รายชื่อผู้จัดทำเว็บไซต์
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         เมนู
+    ================================================== -->
+
+    <div class="navbar">
+
+
+        <a href="index.html">
+            หน้าแรก
+        </a>
+
+
+        <a href="history.html">
+            ประวัติเมืองน่าน
+        </a>
+
+
+        <a href="travel.html">
+            สถานที่ท่องเที่ยว
+        </a>
+
+
+        <a href="culture.html">
+            วัฒนธรรม
+        </a>
+
+
+        <a href="food.html">
+            อาหารพื้นเมือง
+        </a>
+
+
+        <a href="nature.html">
+            ธรรมชาติ
+        </a>
+
+
+        <a href="contact.html" class="active">
+            ติดต่อเรา
+        </a>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         ภาพหัวข้อ
+    ================================================== -->
+
+    <div class="banner">
+
+
+        <div class="banner-text">
+
+
+            <h2>
+                ผู้จัดทำ
+            </h2>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         เนื้อหาตรงกลาง
+    ================================================== -->
+
+    <div class="container">
+
+
+        <h2 class="title">
+            ผู้จัดทำ
+        </h2>
+
+
+
+        <div class="creator-section">
+
+
+            <h2>
+                รายชื่อผู้จัดทำ
+            </h2>
+
+
+
+            <div class="creators">
+
+
+                <!-- ==================================================
+                     ผู้จัดทำคนที่ 1
+                ================================================== -->
+
+                <div class="creator-card">
+
+
+                    <div class="creator-image">
+
+                        <div class="creator-icon">
+                            👨‍🎓
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        นายเสฎฐวุฒิ คำสร้อย
+                    </h3>
+
+
+                    <p class="position">
+                        ผู้จัดทำ
+                    </p>
+
+
+                    <p class="class-info">
+                        ม.6/2
+                    </p>
+
+
+                    <p class="class-info">
+                        เลขที่ 6
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     ผู้จัดทำคนที่ 2
+                ================================================== -->
+
+                <div class="creator-card">
+
+
+                    <div class="creator-image">
+
+                        <div class="creator-icon">
+                            👨‍🎓
+                        </div>
+
+                    </div>
+
+
+                    <h3>
+                        นายวริศ สุทธิสินทอง
+                    </h3>
+
+
+                    <p class="position">
+                        ผู้จัดทำ
+                    </p>
+
+
+                    <p class="class-info">
+                        ม.6/2
+                    </p>
+
+
+                    <p class="class-info">
+                        เลขที่ 14
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 เส้นคั่น
+            ================================================== -->
+
+            <div class="divider"></div>
+
+
+
+            <!-- ==================================================
+                 ปุ่มกลับหน้าแรก
+            ================================================== -->
+
+            <div style="text-align:center;">
+
+                <a
+                    href="index.html"
+                    class="back"
+                >
+
+                    ← กลับหน้าแรก
+
+                </a>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ==================================================
+         Footer
+    ================================================== -->
+
+    <footer>
+
+
+        <h2>
+            จังหวัดน่าน
+        </h2>
+
+
+        <p>
+            เว็บไซต์จัดทำเพื่อการศึกษา
+        </p>
+
+
+    </footer>
+
+
+</body>
+
+</html>
