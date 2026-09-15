@@ -1,0 +1,1378 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>อาหารพื้นเมืองจังหวัดน่าน</title>
+
+
+<style>
+
+/* =========================
+   พื้นฐาน
+========================= */
+
+*{
+    box-sizing:border-box;
+}
+
+
+body{
+
+    margin:0;
+
+    font-family:
+    Arial,
+    "Tahoma",
+    sans-serif;
+
+    background:#f7f2fa;
+
+    color:#333;
+
+    line-height:1.9;
+
+}
+
+
+/* =========================
+   ส่วนหัว
+========================= */
+
+.header{
+
+    background:
+    linear-gradient(
+        135deg,
+        #4a148c,
+        #8e24aa
+    );
+
+    color:white;
+
+    padding:25px 8%;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+.logo{
+
+    width:80px;
+
+    height:80px;
+
+    background:white;
+
+    border-radius:50%;
+
+    margin-right:20px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    overflow:hidden;
+
+}
+
+
+.logo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.header h1{
+
+    margin:0;
+
+    font-size:34px;
+
+}
+
+
+.header p{
+
+    margin:5px 0 0;
+
+    font-size:16px;
+
+}
+
+
+
+/* =========================
+   เมนู
+========================= */
+
+.navbar{
+
+    background:#311b5e;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+}
+
+
+.navbar a{
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 25px;
+
+    transition:.3s;
+
+}
+
+
+.navbar a:hover{
+
+    background:#6a1b9a;
+
+}
+
+
+.navbar a.active{
+
+    background:#6a1b9a;
+
+    font-weight:bold;
+
+}
+
+
+
+/* =========================
+   ภาพด้านบน
+========================= */
+
+.banner{
+
+    width:100%;
+
+    height:380px;
+
+    background-image:
+
+    linear-gradient(
+        rgba(49,27,94,.45),
+        rgba(49,27,94,.70)
+    ),
+
+    url("nan-food.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.banner-text{
+
+    background:
+    rgba(49,27,94,.88);
+
+    color:white;
+
+    padding:30px 55px;
+
+    text-align:center;
+
+    border-radius:15px;
+
+    margin:20px;
+
+}
+
+
+.banner-text h2{
+
+    margin:0;
+
+    font-size:40px;
+
+}
+
+
+.banner-text p{
+
+    margin:8px 0 0;
+
+    font-size:18px;
+
+}
+
+
+
+/* =========================
+   เนื้อหา
+========================= */
+
+.container{
+
+    width:90%;
+
+    max-width:1150px;
+
+    margin:45px auto;
+
+}
+
+
+.content{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:
+    0 4px 15px
+    rgba(74,20,140,.15);
+
+}
+
+
+.content h2{
+
+    color:#6a1b9a;
+
+    border-left:
+    7px solid #9c27b0;
+
+    padding-left:15px;
+
+    margin-top:0;
+
+}
+
+
+.content h3{
+
+    color:#8e24aa;
+
+    font-size:25px;
+
+    margin-top:40px;
+
+    border-bottom:
+    2px solid #e1bee7;
+
+    padding-bottom:8px;
+
+}
+
+
+.content p{
+
+    text-align:justify;
+
+    font-size:16px;
+
+}
+
+
+
+/* =========================
+   รูปภาพหลัก
+========================= */
+
+.main-image{
+
+    width:100%;
+
+    height:350px;
+
+    margin:25px 0;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    background:#eeeeee;
+
+}
+
+
+.main-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+
+/* =========================
+   กล่องข้อมูล
+========================= */
+
+.info{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:20px;
+
+    margin:35px 0;
+
+}
+
+
+.info-box{
+
+    background:#f3e5f5;
+
+    text-align:center;
+
+    padding:22px;
+
+    border-radius:12px;
+
+    border-bottom:
+    5px solid #9c27b0;
+
+    transition:.3s;
+
+}
+
+
+.info-box:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 5px 15px
+    rgba(74,20,140,.15);
+
+}
+
+
+.info-box strong{
+
+    display:block;
+
+    font-size:25px;
+
+    color:#6a1b9a;
+
+}
+
+
+
+/* =========================
+   การ์ดอาหาร
+========================= */
+
+.food-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:30px;
+
+}
+
+
+.food-card{
+
+    background:#ffffff;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 4px 15px
+    rgba(74,20,140,.15);
+
+    transition:.3s;
+
+}
+
+
+.food-card:hover{
+
+    transform:translateY(-7px);
+
+    box-shadow:
+    0 8px 20px
+    rgba(74,20,140,.25);
+
+}
+
+
+
+/* ช่องใส่รูปอาหาร */
+
+.food-image{
+
+    width:100%;
+
+    height:260px;
+
+    background:#eeeeee;
+
+    overflow:hidden;
+
+}
+
+
+.food-image img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+
+.food-content{
+
+    padding:25px;
+
+}
+
+
+.food-content h3{
+
+    border:none;
+
+    margin-top:0;
+
+    color:#6a1b9a;
+
+    font-size:23px;
+
+}
+
+
+.food-content p{
+
+    text-align:justify;
+
+    font-size:15px;
+
+}
+
+
+
+/* =========================
+   รูปประกอบ
+========================= */
+
+.image-box{
+
+    width:100%;
+
+    margin:30px 0;
+
+    text-align:center;
+
+}
+
+
+.image-box img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    border-radius:12px;
+
+}
+
+
+.image-box p{
+
+    text-align:center;
+
+    color:#666;
+
+    font-size:14px;
+
+}
+
+
+
+/* =========================
+   Highlight
+========================= */
+
+.highlight{
+
+    background:#f3e5f5;
+
+    border-left:
+    6px solid #9c27b0;
+
+    padding:25px;
+
+    margin:30px 0;
+
+    border-radius:8px;
+
+}
+
+
+.highlight h3{
+
+    margin-top:0;
+
+    border:none;
+
+}
+
+
+
+/* =========================
+   รายการ
+========================= */
+
+.content ul{
+
+    padding-left:30px;
+
+}
+
+
+.content li{
+
+    margin-bottom:8px;
+
+}
+
+
+
+/* =========================
+   ปุ่ม
+========================= */
+
+.back{
+
+    display:inline-block;
+
+    background:#8e24aa;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:12px 25px;
+
+    border-radius:7px;
+
+    margin-top:25px;
+
+    transition:.3s;
+
+}
+
+
+.back:hover{
+
+    background:#4a148c;
+
+}
+
+
+
+/* =========================
+   Footer
+========================= */
+
+footer{
+
+    margin-top:60px;
+
+    background:#311b5e;
+
+    color:white;
+
+    text-align:center;
+
+    padding:35px;
+
+}
+
+
+
+/* =========================
+   มือถือ
+========================= */
+
+@media(max-width:800px){
+
+    .header{
+
+        flex-direction:column;
+
+        text-align:center;
+
+    }
+
+
+    .logo{
+
+        margin-right:0;
+
+        margin-bottom:15px;
+
+    }
+
+
+    .info{
+
+        grid-template-columns:
+        1fr;
+
+    }
+
+
+    .food-grid{
+
+        grid-template-columns:
+        1fr;
+
+    }
+
+
+    .content{
+
+        padding:25px;
+
+    }
+
+
+    .banner{
+
+        height:300px;
+
+    }
+
+
+    .banner-text h2{
+
+        font-size:28px;
+
+    }
+
+}
+
+
+@media(max-width:500px){
+
+    .navbar a{
+
+        width:50%;
+
+        text-align:center;
+
+    }
+
+
+    .main-image{
+
+        height:220px;
+
+    }
+
+
+    .food-image{
+
+        height:220px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =================================================
+     ส่วนหัว
+================================================= -->
+
+<div class="header">
+
+
+    <!-- ช่องใส่โลโก้ -->
+
+    <div class="logo">
+
+        <img
+            src="logo.png"
+            alt="โลโก้จังหวัดน่าน"
+        >
+
+    </div>
+
+
+    <div>
+
+        <h1>
+            จังหวัดน่าน
+        </h1>
+
+        <p>
+            เมืองแห่งความสงบ ธรรมชาติ และวัฒนธรรมล้านนา
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =================================================
+     เมนูหลัก
+================================================= -->
+
+<div class="navbar">
+
+
+    <a href="index.html">
+        หน้าแรก
+    </a>
+
+
+    <a href="history.html">
+        ประวัติเมืองน่าน
+    </a>
+
+
+    <a href="travel.html">
+        สถานที่ท่องเที่ยว
+    </a>
+
+
+    <a href="culture.html">
+        วัฒนธรรม
+    </a>
+
+
+    <a href="food.html"
+       class="active">
+        อาหารพื้นเมือง
+    </a>
+
+
+    <a href="nature.html">
+        ธรรมชาติ
+    </a>
+
+
+    <a href="contact.html">
+        ติดต่อเรา
+    </a>
+
+
+</div>
+
+
+
+<!-- =================================================
+     ภาพหัวข้อ
+================================================= -->
+
+<div class="banner">
+
+
+    <div class="banner-text">
+
+
+        <h2>
+            อาหารพื้นเมืองจังหวัดน่าน
+        </h2>
+
+
+        <p>
+            รสชาติแห่งวิถีชีวิตและวัฒนธรรมของชาวน่าน
+        </p>
+
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =================================================
+     เนื้อหา
+================================================= -->
+
+<div class="container">
+
+
+<div class="content">
+
+
+    <h2>
+        อาหารพื้นเมืองของจังหวัดน่าน
+    </h2>
+
+
+    <!-- ช่องใส่รูปหลัก -->
+
+    <div class="main-image">
+
+        <img
+            src="nan-food.jpg"
+            alt="อาหารพื้นเมืองจังหวัดน่าน"
+        >
+
+    </div>
+
+
+    <p>
+
+        จังหวัดน่านเป็นจังหวัดที่มีเอกลักษณ์
+        ทางด้านวัฒนธรรมและวิถีชีวิตที่โดดเด่น
+        อาหารพื้นเมืองจึงเป็นอีกหนึ่งสิ่งที่สะท้อน
+        ความเป็นอยู่ของชาวน่านได้เป็นอย่างดี
+        โดยอาหารส่วนใหญ่มีความเรียบง่าย
+        ใช้วัตถุดิบที่หาได้ในท้องถิ่น
+        และมีรสชาติที่เป็นเอกลักษณ์
+
+    </p>
+
+
+    <p>
+
+        อาหารพื้นเมืองของน่านได้รับอิทธิพล
+        จากวัฒนธรรมล้านนา รวมถึงวิถีชีวิต
+        ของกลุ่มชาติพันธุ์ต่าง ๆ ที่อาศัยอยู่
+        ในพื้นที่ ทำให้อาหารของน่านมีความหลากหลาย
+        ทั้งเมนูอาหารคาว อาหารหวาน
+        เครื่องดื่ม และอาหารที่ใช้ในงานประเพณี
+
+    </p>
+
+
+
+    <!-- =========================
+         ข้อมูลสำคัญ
+    ========================= -->
+
+    <div class="info">
+
+
+        <div class="info-box">
+
+            <strong>
+                ล้านนา
+            </strong>
+
+            วัฒนธรรมอาหาร
+
+        </div>
+
+
+        <div class="info-box">
+
+            <strong>
+                ท้องถิ่น
+            </strong>
+
+            วัตถุดิบพื้นบ้าน
+
+        </div>
+
+
+        <div class="info-box">
+
+            <strong>
+                ภูมิปัญญา
+            </strong>
+
+            การปรุงอาหาร
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         เมนูอาหาร
+    ========================= -->
+
+    <h3>
+        เมนูอาหารพื้นเมืองที่น่าสนใจ
+    </h3>
+
+
+    <div class="food-grid">
+
+
+        <!-- อาหารที่ 1 -->
+
+        <div class="food-card">
+
+
+            <div class="food-image">
+
+                <img
+                    src="food1.jpg"
+                    alt="อาหารพื้นเมืองน่าน"
+                >
+
+            </div>
+
+
+            <div class="food-content">
+
+
+                <h3>
+                    ข้าวซอย
+                </h3>
+
+
+                <p>
+
+                    ข้าวซอยเป็นอาหารที่พบได้ในภาคเหนือ
+                    และเป็นหนึ่งในอาหารที่ได้รับความนิยม
+                    มีลักษณะเป็นเส้นบะหมี่ในน้ำแกง
+                    รับประทานคู่กับเครื่องเคียง
+                    และผักดอง
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- อาหารที่ 2 -->
+
+        <div class="food-card">
+
+
+            <div class="food-image">
+
+                <img
+                    src="food2.jpg"
+                    alt="น้ำเงี้ยว"
+                >
+
+            </div>
+
+
+            <div class="food-content">
+
+
+                <h3>
+                    น้ำเงี้ยว
+                </h3>
+
+
+                <p>
+
+                    น้ำเงี้ยวเป็นอาหารพื้นเมือง
+                    ที่นิยมรับประทานในภาคเหนือ
+                    โดยมีน้ำแกงที่มีรสชาติเข้มข้น
+                    รับประทานคู่กับเส้นขนมจีน
+                    และผักสดต่าง ๆ
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- อาหารที่ 3 -->
+
+        <div class="food-card">
+
+
+            <div class="food-image">
+
+                <img
+                    src="food3.jpg"
+                    alt="ไก่ทอดมะแขว่น"
+                >
+
+            </div>
+
+
+            <div class="food-content">
+
+
+                <h3>
+                    ไก่ทอดมะแขว่น
+                </h3>
+
+
+                <p>
+
+                    ไก่ทอดมะแขว่นเป็นเมนูที่นำ
+                    มะแขว่นซึ่งเป็นพืชท้องถิ่น
+                    ของภาคเหนือมาใช้เป็นเครื่องปรุง
+                    ทำให้มีกลิ่นหอมและรสชาติ
+                    ที่เป็นเอกลักษณ์
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- อาหารที่ 4 -->
+
+        <div class="food-card">
+
+
+            <div class="food-image">
+
+                <img
+                    src="food4.jpg"
+                    alt="อาหารพื้นบ้านน่าน"
+                >
+
+            </div>
+
+
+            <div class="food-content">
+
+
+                <h3>
+                    อาหารพื้นบ้าน
+                </h3>
+
+
+                <p>
+
+                    อาหารพื้นบ้านของชาวน่าน
+                    มักใช้ผักพื้นบ้าน สมุนไพร
+                    และวัตถุดิบจากชุมชน
+                    โดยเน้นความเรียบง่าย
+                    และสอดคล้องกับวิถีชีวิต
+                    ของคนในท้องถิ่น
+
+                </p>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         วัตถุดิบ
+    ========================= -->
+
+    <h3>
+        วัตถุดิบที่ใช้ในอาหารพื้นเมือง
+    </h3>
+
+
+    <p>
+
+        อาหารพื้นเมืองของน่านมีการใช้วัตถุดิบ
+        ที่หาได้จากธรรมชาติและพื้นที่เกษตรกรรม
+        เช่น ผักพื้นบ้าน สมุนไพร พริก
+        กระเทียม ปลา เนื้อสัตว์ และเครื่องเทศ
+        ซึ่งนำมาปรุงอาหารให้มีรสชาติและกลิ่น
+        ที่เป็นเอกลักษณ์
+
+    </p>
+
+
+    <ul>
+
+        <li>
+            ผักพื้นบ้าน
+        </li>
+
+        <li>
+            สมุนไพรท้องถิ่น
+        </li>
+
+        <li>
+            พริกและเครื่องเทศ
+        </li>
+
+        <li>
+            ปลาและสัตว์น้ำจากแหล่งน้ำในท้องถิ่น
+        </li>
+
+        <li>
+            เนื้อสัตว์และวัตถุดิบจากเกษตรกร
+        </li>
+
+    </ul>
+
+
+
+    <!-- ช่องรูปวัตถุดิบ -->
+
+    <div class="image-box">
+
+        <img
+            src="local-food.jpg"
+            alt="วัตถุดิบอาหารพื้นเมืองน่าน"
+        >
+
+        <p>
+            วัตถุดิบพื้นบ้านที่ใช้ในการประกอบอาหาร
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         เอกลักษณ์
+    ========================= -->
+
+    <h3>
+        เอกลักษณ์ของอาหารเมืองน่าน
+    </h3>
+
+
+    <p>
+
+        อาหารเมืองน่านมีความโดดเด่นในด้าน
+        การใช้วัตถุดิบท้องถิ่นและภูมิปัญญา
+        ที่สืบทอดต่อกันมาจากรุ่นสู่รุ่น
+        การปรุงอาหารจึงไม่ได้เป็นเพียง
+        การทำอาหารเพื่อรับประทานเท่านั้น
+        แต่ยังเป็นส่วนหนึ่งของวิถีชีวิต
+        และวัฒนธรรมของชุมชน
+
+    </p>
+
+
+    <div class="highlight">
+
+
+        <h3>
+            อาหารกับวัฒนธรรม
+        </h3>
+
+
+        <p>
+
+            อาหารพื้นเมืองยังมีความเกี่ยวข้อง
+            กับงานบุญ งานประเพณี และการต้อนรับ
+            ผู้มาเยือน การรับประทานอาหารร่วมกัน
+            จึงเป็นสิ่งที่ช่วยสร้างความสัมพันธ์
+            ระหว่างสมาชิกในครอบครัวและคนในชุมชน
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         ภูมิปัญญา
+    ========================= -->
+
+    <h3>
+        ภูมิปัญญาการประกอบอาหาร
+    </h3>
+
+
+    <p>
+
+        ชาวน่านมีภูมิปัญญาในการเลือกใช้
+        วัตถุดิบตามฤดูกาล รวมถึงการถนอมอาหาร
+        เพื่อให้สามารถเก็บวัตถุดิบไว้รับประทาน
+        ได้นานขึ้น วิธีการเหล่านี้สะท้อนให้เห็น
+        ถึงความสัมพันธ์ระหว่างคนกับธรรมชาติ
+        และการใช้ทรัพยากรอย่างคุ้มค่า
+
+    </p>
+
+
+    <!-- ช่องรูป -->
+
+    <div class="image-box">
+
+        <img
+            src="food-traditional.jpg"
+            alt="การทำอาหารพื้นเมืองน่าน"
+        >
+
+        <p>
+            การประกอบอาหารตามภูมิปัญญาท้องถิ่น
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================
+         การท่องเที่ยว
+    ========================= -->
+
+    <h3>
+        อาหารพื้นเมืองกับการท่องเที่ยว
+    </h3>
+
+
+    <p>
+
+        อาหารพื้นเมืองถือเป็นส่วนสำคัญ
+        ของการท่องเที่ยวจังหวัดน่าน
+        เพราะนักท่องเที่ยวสามารถสัมผัส
+        รสชาติอาหารท้องถิ่นควบคู่กับ
+        การเรียนรู้วัฒนธรรมและวิถีชีวิต
+        ของชาวน่าน
+
+    </p>
+
+
+    <p>
+
+        ร้านอาหาร ตลาดพื้นเมือง และชุมชน
+        ต่างมีส่วนช่วยเผยแพร่อาหารท้องถิ่น
+        ให้เป็นที่รู้จักมากขึ้น
+        รวมทั้งสามารถสร้างรายได้ให้แก่
+        ผู้ประกอบการและคนในชุมชน
+
+    </p>
+
+
+
+    <!-- =========================
+         สรุป
+    ========================= -->
+
+    <div class="highlight">
+
+
+        <h3>
+            สรุป
+        </h3>
+
+
+        <p>
+
+            อาหารพื้นเมืองจังหวัดน่าน
+            เป็นส่วนหนึ่งของเอกลักษณ์
+            ทางวัฒนธรรมที่สะท้อนถึง
+            วิถีชีวิต ภูมิปัญญา และความสัมพันธ์
+            ของคนในชุมชนกับธรรมชาติ
+            การอนุรักษ์และส่งเสริมอาหารพื้นเมือง
+            จึงเป็นอีกแนวทางหนึ่งในการรักษา
+            วัฒนธรรมของจังหวัดน่านให้คงอยู่ต่อไป
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         ปุ่มกลับหน้าแรก
+    ========================= -->
+
+    <a
+        href="index.html"
+        class="back">
+
+        ← กลับหน้าแรก
+
+    </a>
+
+
+</div>
+
+</div>
+
+
+
+<!-- =================================================
+     Footer
+================================================= -->
+
+<footer>
+
+
+    <h2>
+        จังหวัดน่าน
+    </h2>
+
+
+    <p>
+        เมืองแห่งความสงบ ธรรมชาติ และวัฒนธรรมล้านนา
+    </p>
+
+
+    <p>
+        เว็บไซต์จัดทำเพื่อการศึกษา
+    </p>
+
+
+</footer>
+
+
+</body>
+
+</html>
