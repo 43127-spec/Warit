@@ -1,0 +1,895 @@
+<!DOCTYPE html> 
+<html lang="th"> 
+ 
+<head> 
+ 
+    <meta charset="UTF-8"> 
+ 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+ 
+    <title>จังหวัดน่าน</title> 
+ 
+    <style> 
+ 
+        /* ================= ตั้งค่าพื้นฐาน ================= */ 
+ 
+        * { 
+            box-sizing: border-box; 
+        } 
+ 
+        body { 
+            margin: 0; 
+            font-family: Arial, "Tahoma", sans-serif; 
+            background: #f7f2fa; 
+            color: #333; 
+            line-height: 1.9; 
+        } 
+ 
+ 
+        /* ================= ส่วนหัว ================= */ 
+ 
+        .header { 
+ 
+            background: 
+                linear-gradient( 
+                    135deg, 
+                    #4a148c, 
+                    #8e24aa 
+                ); 
+ 
+            color: white; 
+ 
+            padding: 25px 8%; 
+ 
+            display: flex; 
+ 
+            align-items: center; 
+        } 
+ 
+ 
+        /* ช่องใส่โลโก้ */ 
+ 
+        .logo { 
+ 
+            width: 80px; 
+ 
+            height: 80px; 
+ 
+            background: white; 
+ 
+            border-radius: 50%; 
+ 
+            margin-right: 20px; 
+ 
+            display: flex; 
+ 
+            align-items: center; 
+ 
+            justify-content: center; 
+ 
+            overflow: hidden; 
+        } 
+ 
+ 
+        .logo img { 
+ 
+            width: 100%; 
+ 
+            height: 100%; 
+ 
+            object-fit: cover; 
+        } 
+ 
+ 
+        .header h1 { 
+ 
+            margin: 0; 
+ 
+            font-size: 34px; 
+        } 
+ 
+ 
+        .header p { 
+ 
+            margin: 5px 0 0; 
+ 
+            font-size: 16px; 
+        } 
+ 
+ 
+        /* ================= เมนู ================= */ 
+ 
+        .navbar { 
+ 
+            background: #311b5e; 
+ 
+            display: flex; 
+ 
+            justify-content: center; 
+ 
+            flex-wrap: wrap; 
+        } 
+ 
+ 
+        .navbar a { 
+ 
+            color: white; 
+ 
+            text-decoration: none; 
+ 
+            padding: 15px 22px; 
+ 
+            display: block; 
+ 
+            transition: 0.3s; 
+        } 
+ 
+ 
+        .navbar a:hover { 
+ 
+            background: #6a1b9a; 
+        } 
+ 
+ 
+        .navbar a.active { 
+ 
+            background: #6a1b9a; 
+        } 
+ 
+ 
+        /* ================= ภาพหลัก ================= */ 
+ 
+        .banner { 
+ 
+            width: 100%; 
+ 
+            height: 400px; 
+ 
+            background-image: 
+ 
+                linear-gradient( 
+ 
+                    rgba(49, 27, 94, 0.4), 
+ 
+                    rgba(49, 27, 94, 0.6) 
+ 
+                ), 
+ 
+                url("nan.jpg"); 
+ 
+            background-size: cover; 
+ 
+            background-position: center; 
+ 
+            display: flex; 
+ 
+            justify-content: center; 
+ 
+            align-items: center; 
+        } 
+ 
+ 
+        .banner-text { 
+ 
+            background: 
+                rgba(49, 27, 94, 0.85); 
+ 
+            color: white; 
+ 
+            padding: 35px 60px; 
+ 
+            text-align: center; 
+ 
+            border-radius: 15px; 
+        } 
+ 
+ 
+        .banner-text h2 { 
+ 
+            font-size: 40px; 
+ 
+            margin: 0; 
+        } 
+ 
+ 
+        .banner-text p { 
+ 
+            font-size: 18px; 
+ 
+            margin-bottom: 0; 
+        } 
+ 
+ 
+        /* ================= เนื้อหา ================= */ 
+ 
+        .container { 
+ 
+            width: 90%; 
+ 
+            max-width: 1200px; 
+ 
+            margin: 40px auto; 
+        } 
+ 
+ 
+        .title { 
+ 
+            color: #6a1b9a; 
+ 
+            border-left: 7px solid #9c27b0; 
+ 
+            padding-left: 15px; 
+ 
+            margin-bottom: 30px; 
+        } 
+ 
+ 
+        /* ================= การ์ด ================= */ 
+ 
+        .cards { 
+ 
+            display: flex; 
+ 
+            flex-wrap: wrap; 
+ 
+            justify-content: center; 
+ 
+            gap: 25px; 
+        } 
+ 
+ 
+        .card { 
+ 
+            width: 
+                calc( 
+                    (100% - 50px) / 3 
+                ); 
+ 
+            background: white; 
+ 
+            border-radius: 15px; 
+ 
+            overflow: hidden; 
+ 
+            box-shadow: 
+                0 4px 15px 
+                rgba(74, 20, 140, 0.15); 
+ 
+            transition: 0.3s; 
+        } 
+ 
+ 
+        .card:hover { 
+ 
+            transform: 
+                translateY(-7px); 
+ 
+            box-shadow: 
+                0 8px 20px 
+                rgba(74, 20, 140, 0.25); 
+        } 
+ 
+ 
+        /* ================= ช่องใส่รูป ================= */ 
+ 
+        .card img { 
+ 
+            width: 100%; 
+ 
+            height: 200px; 
+ 
+            object-fit: cover; 
+ 
+            display: block; 
+        } 
+ 
+ 
+        /* ================= เนื้อหาการ์ด ================= */ 
+ 
+        .card-content { 
+ 
+            padding: 20px; 
+        } 
+ 
+ 
+        .card-content h3 { 
+ 
+            color: #6a1b9a; 
+ 
+            margin-top: 0; 
+ 
+            margin-bottom: 12px; 
+        } 
+ 
+ 
+        .card-content p { 
+ 
+            line-height: 1.7; 
+ 
+            margin-bottom: 20px; 
+        } 
+ 
+ 
+        /* ================= ปุ่ม ================= */ 
+ 
+        .card-content a { 
+ 
+            display: inline-block; 
+ 
+            background: #8e24aa; 
+ 
+            color: white; 
+ 
+            padding: 10px 18px; 
+ 
+            border-radius: 6px; 
+ 
+            text-decoration: none; 
+ 
+            transition: 0.3s; 
+        } 
+ 
+ 
+        .card-content a:hover { 
+ 
+            background: #4a148c; 
+        } 
+ 
+ 
+        /* ================= ข้อมูลเพิ่มเติม ================= */ 
+ 
+        .info-section { 
+ 
+            margin-top: 50px; 
+ 
+            background: white; 
+ 
+            padding: 30px; 
+ 
+            border-radius: 15px; 
+ 
+            box-shadow: 
+                0 4px 15px 
+                rgba(74, 20, 140, 0.15); 
+        } 
+ 
+ 
+        .info-section h2 { 
+ 
+            color: #6a1b9a; 
+ 
+            border-left: 7px solid #9c27b0; 
+ 
+            padding-left: 15px; 
+ 
+            margin-top: 0; 
+        } 
+ 
+ 
+        .info-section p { 
+ 
+            line-height: 1.8; 
+ 
+            font-size: 17px; 
+        } 
+ 
+ 
+        /* ================= ส่วนท้าย ================= */ 
+ 
+        footer { 
+ 
+            margin-top: 60px; 
+ 
+            background: #311b5e; 
+ 
+            color: white; 
+ 
+            text-align: center; 
+ 
+            padding: 35px; 
+        } 
+ 
+ 
+        footer h2 { 
+ 
+            margin-top: 0; 
+        } 
+ 
+ 
+        footer p { 
+ 
+            margin: 8px 0; 
+        } 
+ 
+ 
+        /* ================= รองรับมือถือ ================= */ 
+ 
+        @media (max-width: 800px) { 
+ 
+            .cards { 
+ 
+                display: flex; 
+ 
+                flex-direction: column; 
+ 
+                align-items: center; 
+            } 
+ 
+ 
+            .card { 
+ 
+                width: 100%; 
+            } 
+ 
+ 
+            .header { 
+ 
+                text-align: center; 
+ 
+                flex-direction: column; 
+            } 
+ 
+ 
+            .logo { 
+ 
+                margin-right: 0; 
+ 
+                margin-bottom: 15px; 
+            } 
+ 
+ 
+            .banner { 
+ 
+                height: 300px; 
+            } 
+ 
+ 
+            .banner-text { 
+ 
+                width: 90%; 
+ 
+                padding: 25px; 
+            } 
+ 
+ 
+            .banner-text h2 { 
+ 
+                font-size: 28px; 
+            } 
+ 
+ 
+            .banner-text p { 
+ 
+                font-size: 16px; 
+            } 
+ 
+        } 
+ 
+ 
+        @media (max-width: 500px) { 
+ 
+            .navbar a { 
+ 
+                width: 50%; 
+ 
+                text-align: center; 
+            } 
+ 
+        } 
+ 
+    </style> 
+ 
+</head> 
+ 
+ 
+<body> 
+ 
+ 
+    <!-- ==================================================
+         ส่วนหัว 
+    ================================================== --> 
+ 
+    <div class="header"> 
+ 
+ 
+        <!-- ช่องใส่โลโก้ --> 
+ 
+        <div class="logo"> 
+ 
+            <img 
+                src="logo.png" 
+                alt="โลโก้จังหวัดน่าน" 
+            > 
+ 
+        </div> 
+ 
+ 
+        <div> 
+ 
+            <h1> 
+                จังหวัดน่าน 
+            </h1> 
+ 
+ 
+            <p> 
+                เมืองแห่งความสงบ ธรรมชาติ และวัฒนธรรมล้านนา 
+            </p> 
+ 
+        </div> 
+ 
+ 
+    </div> 
+ 
+ 
+ 
+    <!-- ==================================================
+         เมนู 
+    ================================================== --> 
+ 
+    <div class="navbar"> 
+ 
+ 
+        <a href="index.html"> 
+            หน้าแรก 
+        </a> 
+ 
+ 
+        <a href="history.html"> 
+            ประวัติเมืองน่าน 
+        </a> 
+ 
+ 
+        <a href="travel.html"> 
+            สถานที่ท่องเที่ยว 
+        </a> 
+ 
+ 
+        <a href="culture.html"> 
+            วัฒนธรรม 
+        </a> 
+ 
+ 
+        <a href="food.html"> 
+            อาหารพื้นเมือง 
+        </a> 
+ 
+ 
+        <a href="nature.html"> 
+            ธรรมชาติ 
+        </a> 
+ 
+ 
+        <a href="contact.html"> 
+            ติดต่อเรา 
+        </a> 
+ 
+ 
+    </div> 
+ 
+ 
+ 
+    <!-- ==================================================
+         ภาพหลัก 
+    ================================================== --> 
+ 
+    <div class="banner"> 
+ 
+ 
+        <div class="banner-text"> 
+ 
+ 
+            <h2> 
+                ยินดีต้อนรับสู่จังหวัดน่าน 
+            </h2> 
+ 
+ 
+            <p> 
+                สัมผัสเสน่ห์เมืองเก่า ธรรมชาติ 
+                และวิถีชีวิตของชาวน่าน 
+            </p> 
+ 
+ 
+        </div> 
+ 
+ 
+    </div> 
+ 
+ 
+ 
+    <!-- ==================================================
+         ข้อมูลเกี่ยวกับจังหวัดน่าน 
+    ================================================== --> 
+ 
+    <div class="container"> 
+ 
+ 
+        <h2 class="title"> 
+            ข้อมูลเกี่ยวกับจังหวัดน่าน 
+        </h2> 
+ 
+ 
+ 
+        <div class="cards"> 
+ 
+ 
+            <!-- ==================================================
+                 การ์ดที่ 1 : ประวัติเมืองน่าน 
+            ================================================== --> 
+ 
+            <div class="card"> 
+ 
+ 
+                <!-- ช่องใส่รูป --> 
+ 
+                <img 
+                    src="nan-city.jpg" 
+                    alt="เมืองน่าน" 
+                > 
+ 
+ 
+                <div class="card-content"> 
+ 
+ 
+                    <h3> 
+                        ประวัติเมืองน่าน 
+                    </h3> 
+ 
+ 
+                    <p> 
+                        จังหวัดน่านเป็นจังหวัดเล็ก ๆ 
+                        ทางภาคเหนือที่มีประวัติศาสตร์ 
+                        ยาวนานกว่า 700 ปี 
+                    </p> 
+ 
+ 
+                    <a href="history.html"> 
+                        อ่านประวัติ 
+                    </a> 
+ 
+ 
+                </div> 
+ 
+ 
+            </div> 
+ 
+ 
+ 
+            <!-- ==================================================
+                 การ์ดที่ 2 : สถานที่ท่องเที่ยว 
+            ================================================== --> 
+ 
+            <div class="card"> 
+ 
+ 
+                <!-- ช่องใส่รูป --> 
+ 
+                <img 
+                    src="wat-phumin.jpg" 
+                    alt="วัดภูมินทร์" 
+                > 
+ 
+ 
+                <div class="card-content"> 
+ 
+ 
+                    <h3> 
+                        สถานที่ท่องเที่ยว 
+                    </h3> 
+ 
+ 
+                    <p> 
+                        พบกับสถานที่ท่องเที่ยวที่สวยงาม 
+                        ทั้งวัดเก่าแก่ ภูเขา 
+                        และธรรมชาติ 
+                    </p> 
+ 
+ 
+                    <a href="travel.html"> 
+                        ดูสถานที่ท่องเที่ยว 
+                    </a> 
+ 
+ 
+                </div> 
+ 
+ 
+            </div> 
+ 
+ 
+ 
+            <!-- ==================================================
+                 การ์ดที่ 3 : วัฒนธรรมและประเพณี 
+            ================================================== --> 
+ 
+            <div class="card"> 
+ 
+ 
+                <!-- ช่องใส่รูป --> 
+ 
+                <img 
+                    src="culture.jpg" 
+                    alt="วัฒนธรรมจังหวัดน่าน" 
+                > 
+ 
+ 
+                <div class="card-content"> 
+ 
+ 
+                    <h3> 
+                        วัฒนธรรมและประเพณี 
+                    </h3> 
+ 
+ 
+                    <p> 
+                        เรียนรู้วัฒนธรรม ประเพณี 
+                        และวิถีชีวิตที่เป็นเอกลักษณ์ 
+                        ของชาวจังหวัดน่าน 
+                    </p> 
+ 
+ 
+                    <a href="culture.html"> 
+                        ดูข้อมูล 
+                    </a> 
+ 
+ 
+                </div> 
+ 
+ 
+            </div> 
+ 
+ 
+ 
+            <!-- ==================================================
+                 การ์ดที่ 4 : อาหารพื้นเมือง 
+            ================================================== --> 
+ 
+            <div class="card"> 
+ 
+ 
+                <!-- ช่องใส่รูป --> 
+ 
+                <img 
+                    src="food.jpg" 
+                    alt="อาหารพื้นเมืองน่าน" 
+                > 
+ 
+ 
+                <div class="card-content"> 
+ 
+ 
+                    <h3> 
+                        อาหารพื้นเมือง 
+                    </h3> 
+ 
+ 
+                    <p> 
+                        พบกับอาหารพื้นเมืองของชาวน่าน 
+                        ที่มีรสชาติเป็นเอกลักษณ์ 
+                        และสะท้อนถึงวิถีชีวิต 
+                        ของคนในท้องถิ่น 
+                    </p> 
+ 
+ 
+                    <a href="food.html"> 
+                        ดูข้อมูล 
+                    </a> 
+ 
+ 
+                </div> 
+ 
+ 
+            </div> 
+ 
+ 
+ 
+            <!-- ==================================================
+                 การ์ดที่ 5 : ธรรมชาติของน่าน 
+            ================================================== --> 
+ 
+            <div class="card"> 
+ 
+ 
+                <!-- ช่องใส่รูป --> 
+ 
+                <img 
+                    src="nature.jpg" 
+                    alt="ธรรมชาติจังหวัดน่าน" 
+                > 
+ 
+ 
+                <div class="card-content"> 
+ 
+ 
+                    <h3> 
+                        ธรรมชาติของน่าน 
+                    </h3> 
+ 
+ 
+                    <p> 
+                        สัมผัสความสวยงามของภูเขา 
+                        ป่าไม้ และธรรมชาติอันอุดมสมบูรณ์ 
+                        ที่เป็นเสน่ห์สำคัญ 
+                        ของจังหวัดน่าน 
+                    </p> 
+ 
+ 
+                    <a href="nature.html"> 
+                        ดูข้อมูล 
+                    </a> 
+ 
+ 
+                </div> 
+ 
+ 
+            </div> 
+ 
+ 
+ 
+        </div> 
+ 
+ 
+ 
+        <!-- ==================================================
+             ข้อมูลจังหวัดน่าน 
+        ================================================== --> 
+ 
+        <div class="info-section"> 
+ 
+ 
+            <h2> 
+                รู้จักจังหวัดน่าน 
+            </h2> 
+ 
+ 
+            <p> 
+                จังหวัดน่านตั้งอยู่ทางภาคเหนือของประเทศไทย 
+                เป็นจังหวัดที่มีเอกลักษณ์ทางด้านประวัติศาสตร์ 
+                ศิลปวัฒนธรรม และวิถีชีวิตที่เรียบง่าย 
+                มีภูเขาและพื้นที่ป่าไม้เป็นจำนวนมาก 
+                ทำให้มีทิวทัศน์ทางธรรมชาติที่สวยงาม 
+            </p> 
+ 
+ 
+            <p> 
+                นอกจากนี้ จังหวัดน่านยังมีวัดและโบราณสถาน 
+                ที่มีความสำคัญ เช่น วัดภูมินทร์ 
+                และวัดพระธาตุแช่แห้ง 
+                รวมถึงมีประเพณีและศิลปวัฒนธรรมล้านนา 
+                ที่ได้รับการสืบทอดมาจนถึงปัจจุบัน 
+            </p> 
+ 
+ 
+        </div> 
+ 
+ 
+    </div> 
+ 
+ 
+ 
+    <!-- ==================================================
+         ส่วนท้าย 
+    ================================================== --> 
+ 
+    <footer> 
+ 
+ 
+        <h2> 
+            จังหวัดน่าน 
+        </h2> 
+ 
+ 
+        <p> 
+            เมืองแห่งความสงบ ธรรมชาติ และวัฒนธรรมล้านนา 
+        </p> 
+ 
+ 
+        <p> 
+            เว็บไซต์จัดทำเพื่อการศึกษา 
+        </p> 
+ 
+ 
+    </footer> 
+ 
+ 
+</body> 
+ 
+</html>
